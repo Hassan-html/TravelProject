@@ -2,6 +2,11 @@ on:
  push:
   branches:
    -main
+ workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'  # Customize this description
+        required: true
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
