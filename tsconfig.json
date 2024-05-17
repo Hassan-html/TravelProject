@@ -32,6 +32,6 @@
     "app/api/auth/[...nextauth]/options.js",
     "app/api/auth/[...nextauth]/route.js",
     "app/api/auth/[...nextauth]/options.js"
-  ],
+, "server.js"  ],
   "exclude": ["node_modules"]
 }
