@@ -2,6 +2,11 @@ on:
  push:
   branches:
    -main
+ workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'  # Customize this description
+        required: true
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -11,10 +16,10 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: Use Node.js 16
-        uses: actions/setup-node@v2
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
 
       - name: 🔨 Build Project
         run: |
