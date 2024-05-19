@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa6";
 import Dashboard from "@/app/components/admincomponents/navigation/Dashboard";
 import { signOut, useSession } from "next-auth/react";
-export default function Header() {
+export default async function Header() {
   const [nav, setNav] = useState(false);
   const { data: session, status } = useSession();
   useEffect(() => {
